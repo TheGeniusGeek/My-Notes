@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "53013504420",
+    "project_id": "test-9f079",
+    "storage_bucket": "test-9f079.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53013504420:android:0d02bf7a8e5c98e6402131",
+        "android_client_info": {
+          "package_name": "com.OmegaLabs.mynotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53013504420-bc6b9ssmlufi796p1uia6br3mki4282e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0BLHmWWr7DWDm7-JIHFZpJgzd94BKF5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53013504420-bc6b9ssmlufi796p1uia6br3mki4282e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
