@@ -15,7 +15,7 @@ void main() {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: const Color.fromARGB(255, 243, 242, 245)),
-      home: const LoginView(),
+      home: const HomePage(),
       routes: {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
@@ -80,10 +80,15 @@ class _NotesViewState extends State<NotesView> {
         title: const Text("Main UI"),
         actions: [
           PopupMenuButton<MenuItem>(onSelected: (value) async {
-            if (value == MenuItem.logout) {
-              final bool status = await showAlertDialogue(context);
-              if (status == true) {
-              } else {}
+            switch (value) {
+              case MenuItem.logout:
+                final bool status = await showAlertDialogue(context);
+                if (status) {
+                  await FirebaseAuth.instance.signOut();
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
+                }
+                break;
             }
           }, itemBuilder: (context) {
             return [
