@@ -5,7 +5,10 @@ Future<void> showalertdialogue(BuildContext context, String error) {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text("An Error Occured"),
+          title: const Text(
+            "An Error Occured",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           content: Text(error.toString()),
           actions: [
             TextButton(
@@ -15,6 +18,8 @@ Future<void> showalertdialogue(BuildContext context, String error) {
               child: const Text("OK"),
             ),
           ],
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         );
       });
 }
